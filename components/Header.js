@@ -7,8 +7,8 @@ import headerStyles from "../styles/components/Header.module.css";
 /* ================ Usage ================ */
 /*    <Header
         title={"MAIN_TITLE"}
-        noBorder={true} <------- Set this as 'true' if you don't want a border beneath the title.
-        isCentered={true} <------- Used to adjust the title to center, if set to false, it the title defaults to the left.
+        noBorder={false} <------- Set this as 'true' if you don't want a border beneath the title.
+        isCentered={false} <------- Used to adjust the title to center, if set to false, it the title defaults to the left.
         customButton={
           <Buttons
             text={SAMPLE_BUTTON}

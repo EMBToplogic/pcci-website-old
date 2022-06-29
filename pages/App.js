@@ -11,6 +11,11 @@ import Events from "../components/home/Events";
 
 const Hero = dynamic(() => import("../components/home/Hero"), { ssr: false });
 
+const CorporateSponsors = dynamic(
+  () => import("../components/home/CorporateSponsors"),
+  { ssr: false }
+);
+
 const App = () => {
   return (
     <div>
@@ -18,6 +23,7 @@ const App = () => {
       <Hero />
       <News />
       <Events />
+      <CorporateSponsors />
     </div>
   );
 };
