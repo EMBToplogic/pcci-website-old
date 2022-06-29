@@ -1,0 +1,17 @@
+.news_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background-color: var(--white);
+}
+
+.news_inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5% 0%;
+    height: 100%;
+}
