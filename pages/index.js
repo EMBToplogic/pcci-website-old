@@ -2,4 +2,6 @@
 
 import Home from "./Home";
 
-export default (props) => <Home {...props} />;
+export default (props) => {
+  <Home {...props} />;
+};
