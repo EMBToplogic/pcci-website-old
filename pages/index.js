@@ -1,5 +1,7 @@
 // Components
 
-import Home from "./Home";
+import App from "./App";
 
-export default (props) => <Home {...props} />;
+App.displayName = "Philippine Chamber";
+
+export default (props) => <App {...props} />;
