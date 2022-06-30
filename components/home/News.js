@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import Header from "../Header";
 import Buttons from "../Buttons";
-import NewsContainer from "../NewsContainer";
+import NewsGridContainer from "../NewsGridContainer";
 
 // CSS
 
@@ -35,7 +35,9 @@ const News = ({ news }) => {
         }
       />
       <div className={newsStyles.news_inner}>
-        <NewsContainer shownNews={3} newsData={news} />
+        {news.map((news, index) => {
+          return <NewsGridContainer news={news} key={news} />;
+        })}
       </div>
     </div>
   );
