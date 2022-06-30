@@ -39,7 +39,9 @@ const NewsPage = ({ news }) => {
           />
           <div className={newsPageStyles.news_page_container}>
             {news.data.map((news, index) => {
-              return <NewsGridContainer news={news} />;
+              return (
+                <NewsGridContainer news={news} key={news.announcementcode} />
+              );
             })}
           </div>
         </div>
