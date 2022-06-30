@@ -1,0 +1,27 @@
+.news_grid_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: initial;
+    padding: 20px;
+    background-color: var(--l-grey);
+    color: var(--black);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.news_no {
+    font-size: 50px;
+    margin: 0px;
+}
+
+.news_title {
+    margin: 5% 0%;
+    padding-bottom: 5%;
+    border-bottom: 1px solid var(--border);
+}
+
+.news_content {
+    margin-bottom: 5%;
+}

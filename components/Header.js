@@ -31,7 +31,14 @@ const Header = ({ ...props }) => {
           justifyContent: props.isCentered ? "center" : "space-between",
         }}
       >
-        <h1 className={headerStyles.title}>{props.title}</h1>
+        <h1
+          className={headerStyles.title}
+          style={{
+            ...props.style,
+          }}
+        >
+          {props.title}
+        </h1>
         {props.customButton && props.customButton}
       </div>
     </div>

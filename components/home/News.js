@@ -7,15 +7,11 @@ import Header from "../Header";
 import Buttons from "../Buttons";
 import NewsContainer from "../NewsContainer";
 
-// Hooks
-
-import useWindowSize from "../../hooks/useWindowSize";
-
 // CSS
 
 import newsStyles from "../../styles/components/home/News.module.css";
 
-const News = () => {
+const News = ({ news }) => {
   return (
     <div
       className={newsStyles.news_main}
@@ -39,7 +35,7 @@ const News = () => {
         }
       />
       <div className={newsStyles.news_inner}>
-        <NewsContainer shownNews={3} />
+        <NewsContainer shownNews={3} newsData={news} />
       </div>
     </div>
   );

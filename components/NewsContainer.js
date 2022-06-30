@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import Link from "next/link";
 
 // CSS
 
@@ -8,12 +9,10 @@ import newsContainerStyles from "../styles/components/NewsContainer.module.css";
 
 import { ArrowRight } from "react-feather";
 
-import sampleData from "../sampleData.json";
-
 const NewsContainer = ({ ...props }) => {
   return (
     <>
-      {sampleData.map((data, index) => {
+      {props.newsData.data.map((data, index) => {
         return (
           <div
             className={newsContainerStyles.news_container_main}
@@ -27,9 +26,11 @@ const NewsContainer = ({ ...props }) => {
                   : 10
               }`,
             }}
-            key={data.newsno}
+            key={data.announcementcode}
           >
-            <h1 className={newsContainerStyles.news_no}>{data.newsno}</h1>
+            <h1 className={newsContainerStyles.news_no}>
+              {data.announcementcode}
+            </h1>
             <h1 className={newsContainerStyles.news_title}>
               {data.title.length > 80
                 ? `${data.title.substring(0, 80)}...`
@@ -39,7 +40,11 @@ const NewsContainer = ({ ...props }) => {
               {`${data.description.substring(0, 200)}...`}
             </div>
             <div className='btn_go_to_news'>
-              <ArrowRight />
+              <Link href={`/news/${data.announcementcode}`}>
+                <a>
+                  <ArrowRight />
+                </a>
+              </Link>
             </div>
           </div>
         );

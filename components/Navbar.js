@@ -21,7 +21,11 @@ import { Menu } from "react-feather";
 const Navbar = () => {
   return (
     <div className={navStyles.navbar_container}>
-      <Image src={PCCI_Logo} style={{ marginRight: "auto" }} />
+      <Link href='/'>
+        <a>
+          <Image src={PCCI_Logo} style={{ marginRight: "auto" }} />
+        </a>
+      </Link>
       <ul className={navStyles.navbar_list}>
         <li className={navStyles.navbar_list_item}>
           <Link href='about-us'>

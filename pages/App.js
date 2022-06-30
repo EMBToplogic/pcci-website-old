@@ -16,12 +16,12 @@ const CorporateSponsors = dynamic(
   { ssr: false }
 );
 
-const App = () => {
+const App = ({ news }) => {
   return (
     <div>
       <Navbar />
       <Hero />
-      <News />
+      <News news={news} />
       <Events />
       <CorporateSponsors />
     </div>

@@ -9,7 +9,7 @@ const Buttons = ({ ...props }) => {
     return (
       <div
         className={buttonStyles.button_primary}
-        onClick={() => props.onClick()}
+        onClick={props.onClick ? () => props.onClick() : null}
         style={props.customStyles}
       >
         {props.text}
@@ -19,7 +19,7 @@ const Buttons = ({ ...props }) => {
     return (
       <div
         className={buttonStyles.button_secondary}
-        onClick={() => props.onClick()}
+        onClick={props.onClick ? () => props.onClick() : null}
         style={props.customStyles}
       >
         {props.text}
